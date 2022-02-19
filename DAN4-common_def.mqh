@@ -1,0 +1,17 @@
+#property copyright "Daniel"
+#include <stdlib.mqh>
+
+#define OK "OK"
+#define NO "NO"
+#define YES "YES"
+#define BUY "BUY"
+#define SELL "SELL"
+#define ALL "ALL"
+#define EVERYTHING "EVERYTHING"
+#define UP "UP"
+#define DOWN "DOWN"
+#define NONE "NONE"
+#define NL "\n"
+#define LINE "----------------------------------------\n"
+#define SPC " | " 
+#define SPQ "\" | \"" 
