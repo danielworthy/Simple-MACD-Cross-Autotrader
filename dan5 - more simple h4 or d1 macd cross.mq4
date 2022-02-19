@@ -1,11 +1,11 @@
-#include <c:\metatraders\DAN4-common_def.mqh>
-#include <c:\metatraders\DAN4-common1.mqh>
-#include <c:\metatraders\DAN4-order_functions.mqh>
-#include <c:\metatraders\DAN4-init.mqh>
-#include <c:\metatraders\DAN4-setup.mqh>
-#include <c:\metatraders\DAN4-order_info.mqh>
-#include <c:\metatraders\DAN4-trailing_stop_functions.mqh>
-#include <c:\metatraders\DAN4-indicators.mqh>
+#include <DAN4-common_def.mqh>
+#include <DAN4-common1.mqh>
+#include <DAN4-order_functions.mqh>
+#include <DAN4-init.mqh>
+#include <DAN4-setup.mqh>
+#include <DAN4-order_info.mqh>
+#include <DAN4-trailing_stop_functions.mqh>
+#include <DAN4-indicators.mqh>
 
 
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------
