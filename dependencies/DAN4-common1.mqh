@@ -258,24 +258,25 @@ int subAV_SPREAD() {
 
 
    // add extra storage to array
-   ArrayResize(gSPREAD_ARRAY,fITEMS+1);   
-   
-   
-   
+   ArrayResize(gSPREAD_ARRAY,fITEMS+1);
+
+
+
    // add spread to array
-   gSPREAD_ARRAY[fITEMS+1] = fSPREAD;
-   
-   
+   gSPREAD_ARRAY[fITEMS] = fSPREAD;
+
+
    int fINT=0;
    int fTOTAL=0;
-   
-   
-   for(fINT=0;fINT<fITEMS+1;fINT++)  {
+   int fCOUNT = ArrayRange(gSPREAD_ARRAY,0);
+
+
+   for(fINT=0;fINT<fCOUNT;fINT++)  {
       fTOTAL = fTOTAL + gSPREAD_ARRAY[fINT];
-      } 
-  
-  
-   int fAV_SPREAD = fTOTAL / (fITEMS +1) ; 
+      }
+
+
+   int fAV_SPREAD = fTOTAL / fCOUNT ;
    
    
    
