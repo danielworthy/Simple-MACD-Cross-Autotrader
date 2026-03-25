@@ -414,16 +414,27 @@ void subFRACTALS_ARRAY(int fNUMBER_OF_FRACTALS)
    while_counter=3;
    for(for_counter=0; for_counter<fNUMBER_OF_FRACTALS; for_counter++)
      {
+      gUPF[for_counter][0] = 0;
 
+      int found_index = -1;
 
-      while(gUPF[for_counter][0] == 0)
+      while(while_counter < Bars)
         {
-         gUPF[for_counter][0] = iFractals(NULL,0,MODE_UPPER,while_counter);
-         while_counter++;
-         if(while_counter >= Bars)
+         double fractal = iFractals(NULL,0,MODE_UPPER,while_counter);
+         if(fractal != 0)
+           {
+            gUPF[for_counter][0] = fractal;
+            found_index = while_counter;
+            while_counter++;
             break;
+           }
+         while_counter++;
         }
-      gUPF[for_counter][1] = while_counter;
+
+      if(found_index == -1)
+         found_index = MathMax(while_counter - 1, 0);
+
+      gUPF[for_counter][1] = found_index;
      }
 
 
@@ -432,16 +443,27 @@ void subFRACTALS_ARRAY(int fNUMBER_OF_FRACTALS)
    while_counter=3;
    for(for_counter=0; for_counter<fNUMBER_OF_FRACTALS; for_counter++)
      {
+      gDNF[for_counter][0] = 0;
 
+      int found_index = -1;
 
-      while(gDNF[for_counter][0] == 0)
+      while(while_counter < Bars)
         {
-         gDNF[for_counter][0] = iFractals(NULL,0,MODE_LOWER,while_counter);
-         while_counter++;
-         if(while_counter >= Bars)
+         double fractal = iFractals(NULL,0,MODE_LOWER,while_counter);
+         if(fractal != 0)
+           {
+            gDNF[for_counter][0] = fractal;
+            found_index = while_counter;
+            while_counter++;
             break;
+           }
+         while_counter++;
         }
-      gDNF[for_counter][1] = while_counter;
+
+      if(found_index == -1)
+         found_index = MathMax(while_counter - 1, 0);
+
+      gDNF[for_counter][1] = found_index;
      }
 
 

@@ -16,7 +16,18 @@ void subORDERSTATUS()
    {
       x = OrderSelect(counter,SELECT_BY_POS,MODE_TRADES);
       
-      if ( OrderType() == BUY || OrderType() == SELL ) gGLOBALOPENORDERS++;
+      int orderType = OrderType();
+      if (
+            orderType == OP_BUY ||
+            orderType == OP_SELL
+#ifdef ORDER_TYPE_BUY
+            || orderType == ORDER_TYPE_BUY ||
+            orderType == ORDER_TYPE_SELL
+#endif
+         )
+      {
+         gGLOBALOPENORDERS++;
+      }
       if(OrderSymbol()==Symbol()  )
       {
          if(OrderType()==OP_BUY ) { gBUYTRADES++; gBUYPROFIT = gBUYPROFIT + OrderProfit();  }
