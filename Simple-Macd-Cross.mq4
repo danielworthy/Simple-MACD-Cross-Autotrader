@@ -1,15 +1,15 @@
-#include <dependencies/DAN4-common_def.mqh>
-#include <dependencies/DAN4-common1.mqh>
-#include <dependencies/DAN4-order_functions.mqh>
-#include <dependencies/DAN4-init.mqh>
-#include <dependencies/DAN4-setup.mqh>
-#include <dependencies/DAN4-order_info.mqh>
-#include <dependencies/DAN4-trailing_stop_functions.mqh>
-#include <dependencies/DAN4-indicators.mqh>
+#include "dependencies/DAN4-common_def.mqh"
+#include "dependencies/DAN4-common1.mqh"
+#include "dependencies/DAN4-order_functions.mqh"
+#include "dependencies/DAN4-init.mqh"
+#include "dependencies/DAN4-setup.mqh"
+#include "dependencies/DAN4-order_info.mqh"
+#include "dependencies/DAN4-trailing_stop_functions.mqh"
+#include "dependencies/DAN4-indicators.mqh"
 
 
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------
-//   dan5 - 1 trade per cross method
+//   Simple MACD Cross Autotrader
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 // last modified 2020-07-20
@@ -17,7 +17,7 @@
 
 
   
-extern string           Expert_Name          = "DAN5 - more simple H4 or D1 macd cross";
+extern string           Expert_Name          = "Simple MACD Cross Autotrader";
 
 // const bool            TRADE = true;
 const bool            TRADE = true;
